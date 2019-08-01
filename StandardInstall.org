@@ -55,8 +55,8 @@
    5. Add extra desktops
       + Start -> Applications -> Settings -> System Settings
       + Desktop Behaviour -> Virtual Desktops
-      + Make 4 desktops (this should make a desktop switching widget on
-	the toolbar)
+      + Make 4 desktops (this should make a desktop switching widget \
+        on the toolbar)
       + Move the switcher over to the right-hand side
       + Setup shortcuts so "Ctrl-Alt-Left" and "Ctrl-Alt-Right" switch
 	the desktops (these settings are also in the System Settings)
