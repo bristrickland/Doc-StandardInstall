@@ -93,7 +93,26 @@
       #+END_SRC
 ** Start copying files
 *** skel
-    - 
+    This helps set up defaults when new users are added
+    #+BEGIN_SRC sh
+    cd files/skel
+    sudo mv * /etc/skel
+    sudo mv .* /etc/skel
+    cd ../
+    #+END_SRC
+    Don't worry about the "Device busy" errors.
+*** motd
+    This provides a banner upon logging in
+    #+BEGIN_SRC sh
+    cd motd
+    sudo cp motd /etc/    
+    #+END_SRC
+*** Packages
+    Install a bunch of packages
+    - Basic
+      #+BEGIN_SRC sh
+      sudo apt install openssh screen build-essential emacs
+      #+END_SRC
 ** Setup basic DAQ user
    - Reboot!
    - Log in as daq
