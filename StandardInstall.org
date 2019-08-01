@@ -105,7 +105,13 @@
     This provides a banner upon logging in
     #+BEGIN_SRC sh
     cd motd
-    sudo cp motd /etc/    
+    sudo cp motd /etc/
+    cd ../
+    #+END_SRC
+*** images
+    For background images
+    #+BEGIN_SRC sh
+    rsync -av images /data/
     #+END_SRC
 *** Packages
     Install a bunch of packages
