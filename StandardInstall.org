@@ -95,11 +95,9 @@
 *** skel
     This helps set up defaults when new users are added
     #+BEGIN_SRC sh
-    cd files/skel
-    cp * ~/
-    cp .* ~/
-    sudo cp * /etc/skel
-    sudo cp .* /etc/skel
+    cd files/
+    rsync -av skel/ ~/
+    sudo rsync -av skel/ /etc/skel/
     cd ../
     #+END_SRC
     Don't worry about the "Device busy" errors.
