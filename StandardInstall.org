@@ -39,22 +39,77 @@
 * First boot
 ** Install a few things to make life easier
    - google-chrome
+   - git
+     #+BEGIN_SRC sh
+     sudo apt install git
+     #+END_SRC
 ** Setup the desktop to make life easier still
-   - Install any updates
-   - Drag the terminal icon from the menu to the right of the "start button"
-   - Same with google chrome
-   - Load the "Folder view" widget to the toolbar
-     + Click on the settings button on the right of the toolbar
-     + Click "Add widgets"
-     + Find "Folder View"
-     + Move the widget over close to the "start button"
-   - Add extra desktops
-     + Start -> Applications -> Settings -> System Settings
-     + Desktop Behaviour -> Virtual Desktops
-     + Make 4 desktops (this should make a desktop switching widget on
-       the toolbar)
-     + Move the switcher over to the right-hand side
-     + Setup shortcuts so "Ctrl-Alt-Left" and "Ctrl-Alt-Right" switch
-       the desktops (these settings are also in the System Settings)
-   - While you're in the shortcuts, change the Run Command to launch
-     on "Meta+Space" (Windows+Space)
+   1. Install any updates
+   2. Drag the terminal icon from the menu to the right of the "start button"
+   3. Same with google chrome
+   4. Load the "Folder view" widget to the toolbar
+      + Click on the settings button on the right of the toolbar
+      + Click "Add widgets"
+      + Find "Folder View"
+      + Move the widget over close to the "start button"
+   5. Add extra desktops
+      + Start -> Applications -> Settings -> System Settings
+      + Desktop Behaviour -> Virtual Desktops
+      + Make 4 desktops (this should make a desktop switching widget on
+	the toolbar)
+      + Move the switcher over to the right-hand side
+      + Setup shortcuts so "Ctrl-Alt-Left" and "Ctrl-Alt-Right" switch
+	the desktops (these settings are also in the System Settings)
+   6. While you're in the shortcuts, change the Run Command to launch
+      on "Meta+Space" (Windows+Space)
+   7. Window Management
+      + Still in System Settings, change the window behavior to "Focus
+	Follows Mouse" and the Delay to 150 ms.
+      + Under Window Actions change the modifier key to "Meta"
+   8. Keyboard setup
+      + Still in system settings, go to Input Devices -> Keyboard
+      + Make sure numlock is always on by default
+      + Under "Advanced" click the "Key Sequence to kill the X server"
+	(now "Ctrl-Alt-Backspace" will kill the X server in case of
+	crashes)
+   9. Screensaver
+      + Still in System Settings under Power Management. Lengthen
+	Screen Energy Saving to 60 minutes.
+   10. Make new users (here I'll make the DAQ user: "daq")
+       + Still in system settings
+       + Account Details -> User Manager -> New User
+       + Make sure daq has admin privileges
+** Clone the git repository
+   1) Make a directory to work from:
+      #+BEGIN_SRC sh
+      cd
+      mkdir tmp
+      cd tmp
+      #+END_SRC
+   2) Clone the git repo
+      #+BEGIN_SRC sh
+      git clone http://engesrv.physics.ncsu.edu/Docs/StandardInstall.git
+      cd StandardInstall
+      #+END_SRC
+** Start copying files
+*** skel
+    - 
+** Setup basic DAQ user
+   - Reboot!
+   - Log in as daq
+   - Repeat steps 2-9 above
+   - Remove the useless folders
+     + Documents, Downloads, Music, Pictures, Templates, Videos
+   - Make the data partition owned appropriately
+     #+BEGIN_SRC sh
+     cd /
+     sudo chown -R daq:daq data
+     cd
+     #+END_SRC
+   - Make Downloads folder in the storage area and link everything
+     #+BEGIN_SRC sh
+     cd
+     ln -s /data data
+     mkdir data/Downloads
+     ln -s data/Downloads .
+     #+END_SRC

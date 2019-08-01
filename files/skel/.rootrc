@@ -1,0 +1,7 @@
+# load same alias file for all root sessions.
+Rint.Load:    $(HOME)/.rootalias.C
+#Rint.Load:    $(HOME)/.rootlogon.C
+
+Canvas.ShowEventStatus:     true
+Canvas.ShowToolBar:         true
+Canvas.ShowEditor:          true
