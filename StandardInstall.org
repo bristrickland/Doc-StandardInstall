@@ -111,7 +111,11 @@
     Install a bunch of packages
     - Basic
       #+BEGIN_SRC sh
-      sudo apt install openssh screen build-essential emacs
+      sudo apt install openssh-server screen build-essential emacs
+      #+END_SRC
+    - Other important tools
+      #+BEGIN_SRC sh
+      sudo apt install ess subversion libblas-dev liblapack-dev git gfortran libopenmpi-dev openmpi-bin cmake magit xorg-dev org-mode emacs-goodies-el
       #+END_SRC
 ** Setup basic DAQ user
    - Reboot!
