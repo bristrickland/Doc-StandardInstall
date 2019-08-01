@@ -75,10 +75,6 @@
    9. Screensaver
       + Still in System Settings under Power Management. Lengthen
 	Screen Energy Saving to 60 minutes.
-   10. Make new users (here I'll make the DAQ user: "daq")
-       + Still in system settings
-       + Account Details -> User Manager -> New User
-       + Make sure daq has admin privileges
 ** Clone the git repository
    1) Make a directory to work from:
       #+BEGIN_SRC sh
@@ -150,21 +146,35 @@
             xfig
     #+END_SRC
 ** Setup basic DAQ user
-   - Reboot!
-   - Log in as daq
-   - Repeat steps 2-9 above
-   - Remove the useless folders
-     + Documents, Downloads, Music, Pictures, Templates, Videos
-   - Make the data partition owned appropriately
-     #+BEGIN_SRC sh
-     cd /
-     sudo chown -R daq:daq data
-     cd
-     #+END_SRC
-   - Make Downloads folder in the storage area and link everything
-     #+BEGIN_SRC sh
-     cd
-     ln -s /data data
-     mkdir data/Downloads
-     ln -s data/Downloads .
-     #+END_SRC
+   1. Make new users (here I'll make the DAQ user: "daq")
+      - Still in system settings
+      - Account Details -> User Manager -> New User
+      - Make sure daq has admin privileges
+   2. Reboot!
+   3. Log in as daq
+   4. Repeat steps 2-9 above
+   5. Remove the useless folders
+      + Documents, Downloads, Music, Pictures, Templates, Videos
+   6. Make the data partition owned appropriately
+      #+BEGIN_SRC sh
+      cd /
+      sudo chown -R daq:daq data
+      cd
+      #+END_SRC
+   7. Make Downloads folder in the storage area and link everything
+      #+BEGIN_SRC sh
+      cd
+      ln -s /data data
+      mkdir data/Downloads
+      ln -s data/Downloads .
+      #+END_SRC
+** Install other things by hand
+   - root6
+     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/InstallRoot
+   - NSCLDAQ
+     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/NSCLDAQ
+   - EPICS client
+     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/EPICSClient
+   - MIDAS
+     See my instructions here:
+     http://engesrv.physics.ncsu.edu/Docs/MIDAS
