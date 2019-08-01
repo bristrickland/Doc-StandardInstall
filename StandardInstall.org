@@ -111,8 +111,15 @@
 *** images
     For background images
     #+BEGIN_SRC sh
-    rsync -av images /data/
+    rsync -av images ~/
     #+END_SRC
+    - Set the background of the desktop
+      + Right click desktop background, then "Configure Desktop"
+      + Layout = Desktop
+      + Wallpaper Type = Image
+      + Positioning = Scaled, Keep Proportions
+      + Background = Solid color (black)
+      + Click "Add image" and select FENRISLogo-notext.png
 *** Packages
     Install a bunch of packages
     - Basic
@@ -121,8 +128,27 @@
       #+END_SRC
     - Other important tools
       #+BEGIN_SRC sh
-      sudo apt install ess subversion libblas-dev liblapack-dev git gfortran libopenmpi-dev openmpi-bin cmake magit xorg-dev org-mode emacs-goodies-el
+      sudo apt install ess subversion libblas-dev liblapack-dev git gfortran libopenmpi-dev \
+              openmpi-bin cmake magit xorg-dev org-mode emacs-goodies-el
       #+END_SRC
+*** R Packages
+    Install a bunch of packages for R
+    #+BEGIN_SRC sh
+    sudo apt install r-base-core r-cran-cluster r-cran-coda r-cran-hmisc \
+            r-cran-lattice r-cran-mass r-cran-mcmcpack r-cran-plotrix \
+            r-cran-rcolorbrewer r-cran-rcpp r-cran-survival \
+            r-cran-teachingdemos 
+    #+END_SRC
+*** LaTeX
+    A bunch of useful LaTeX stuff
+    #+BEGIN_SRC sh
+    sudo apt install texlive texlive-base auctex preview-latex-style \
+            texlive-fonts-recommended texlive-generic-recommended \
+            texlive-generic-extra texlive-latex-recommended-doc \
+            texlive-science libpgf-dev \
+            texlive-pictures texlive-pstricks texlive-publishers \
+            xfig
+    #+END_SRC
 ** Setup basic DAQ user
    - Reboot!
    - Log in as daq
