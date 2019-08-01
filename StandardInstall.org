@@ -1,0 +1,60 @@
+#+TITLE: Standard Install
+#+DATE: <2016-03-24 Tue>
+#+AUTHOR: Richard Longland
+#+EMAIL: longland@X1Carbon
+#+OPTIONS: ':nil *:t -:t ::t <:t H:2 \n:nil ^:t arch:headline
+#+OPTIONS: author:nil c:nil creator:comment d:nil date:t e:t email:nil
+#+OPTIONS: f:t inline:t num:t p:nil pri:nil stat:t tags:not-in-toc
+#+OPTIONS: tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 24.3.1 (Org mode 8.2.4)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+LATEX_HEADER: \usepackage{fullpage}
+#+LATEX_HEADER: \usepackage{times}
+
+* Introduction Notes
+  The following instructions are based on a KDE Neon (based on Ubuntu
+  LTS 18.04) install performed on Aug. 1, 2019. It should be about the
+  same as Ubuntu so these instructions should work.
+
+* Preparation
+  - Write the install image to a USB stick
+    #+BEGIN_SRC sh
+    sudo dd bs=4M if=neon-user-2019-0719-1117.iso of=/dev/sdX
+    #+END_SRC
+    Where 'sdX' is the location of the usb drive (google it)
+  - Install the image onto the hard drive. I like to keep data
+    separate, so operating systems can be clean-updated without
+    losing the data. Here's what this machine looks like:
+    | label | Mount point | size     | file system | Notes                      |
+    |-------+-------------+----------+-------------+----------------------------|
+    | sda1  | NA          | 650 MiB  | NA          | EFI Boot                   |
+    | sda2  | /           | 182.3 GB | ext4        | All operating system files |
+    | sda3  | /data       | 1.6 TB   | ext4        | Storage                    |
+    | sda4  | swap        | 16 GB    | swap        | Same as available RAM      |
+  - Select correct timezone, make first user (mine is 'longland')
+* First boot
+** Install a few things to make life easier
+   - google-chrome
+** Setup the desktop to make life easier still
+   - Install any updates
+   - Drag the terminal icon from the menu to the right of the "start button"
+   - Same with google chrome
+   - Load the "Folder view" widget to the toolbar
+     + Click on the settings button on the right of the toolbar
+     + Click "Add widgets"
+     + Find "Folder View"
+     + Move the widget over close to the "start button"
+   - Add extra desktops
+     + Start -> Applications -> Settings -> System Settings
+     + Desktop Behaviour -> Virtual Desktops
+     + Make 4 desktops (this should make a desktop switching widget on
+       the toolbar)
+     + Move the switcher over to the right-hand side
+     + Setup shortcuts so "Ctrl-Alt-Left" and "Ctrl-Alt-Right" switch
+       the desktops (these settings are also in the System Settings)
+   - While you're in the shortcuts, change the Run Command to launch
+     on "Meta+Space" (Windows+Space)
