@@ -47,7 +47,7 @@
        (reftex-parse-all))
   (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
   )
-(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+;;(add-hook 'org-mode-hook 'org-mode-reftex-setup)
 
 ;; Insert image block into org buffer (keyboard binding below)
 (defun org-insert-image (cap lab)
