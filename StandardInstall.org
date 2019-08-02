@@ -26,22 +26,33 @@
     sudo dd bs=4M if=neon-user-2019-0719-1117.iso of=/dev/sdX
     #+END_SRC
     Where 'sdX' is the location of the usb drive (google it)
-  - Install the image onto the hard drive. I like to keep data
-    separate, so operating systems can be clean-updated without
-    losing the data. Here's what this machine looks like:
+  - Install the image onto the hard drive. I like to keep data separate, so operating systems can be clean-updated without losing the data. Here's what this machine looks like:
     | label | Mount point | size     | file system | Notes                      |
     |-------+-------------+----------+-------------+----------------------------|
     | sda1  | NA          | 650 MiB  | NA          | EFI Boot                   |
     | sda2  | /           | 182.3 GB | ext4        | All operating system files |
     | sda3  | /data       | 1.6 TB   | ext4        | Storage                    |
     | sda4  | swap        | 16 GB    | swap        | Same as available RAM      |
-  - Select correct timezone, make first user (mine is 'longland')
+  - Select correct timezone, make first user (here I'll make the user 'daq')
 * First boot
 ** Install a few things to make life easier
    - google-chrome
    - git
      #+BEGIN_SRC sh
      sudo apt install git
+     #+END_SRC
+   - Make the data partition owned appropriately
+     #+BEGIN_SRC sh
+     cd /
+     sudo chown -R daq:daq data
+     cd
+     #+END_SRC
+   - Make Downloads folder in the storage area and link everything
+     #+BEGIN_SRC sh
+     cd
+     ln -s /data data
+     mkdir data/Downloads
+     ln -s data/Downloads .
      #+END_SRC
 ** Setup the desktop to make life easier still
    1. Install any updates
@@ -138,29 +149,16 @@
             texlive-pictures texlive-pstricks texlive-publishers \
             xfig
     #+END_SRC
-** Setup basic DAQ user
-   1. Make new users (here I'll make the DAQ user: "daq")
+** Setup new users
+   1. Make new users (here I'll make the DAQ user: "longland")
       - Still in system settings
       - Account Details -> User Manager -> New User
-      - Make sure daq has admin privileges
+      - Make sure user has admin privileges if desired
    2. Reboot!
-   3. Log in as daq
+   3. Log in as new user
    4. Repeat steps 2-9 above
    5. Remove the useless folders
       + Documents, Downloads, Music, Pictures, Templates, Videos
-   6. Make the data partition owned appropriately
-      #+BEGIN_SRC sh
-      cd /
-      sudo chown -R daq:daq data
-      cd
-      #+END_SRC
-   7. Make Downloads folder in the storage area and link everything
-      #+BEGIN_SRC sh
-      cd
-      ln -s /data data
-      mkdir data/Downloads
-      ln -s data/Downloads .
-      #+END_SRC
 ** Install other things by hand
    - root6
      See my instructions here: http://engesrv.physics.ncsu.edu/Docs/InstallRoot
