@@ -161,10 +161,10 @@
       + Documents, Downloads, Music, Pictures, Templates, Videos
 ** Install other things by hand
    - root6
-     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/InstallRoot
+     See my instructions here: [[http://engesrv.physics.ncsu.edu/Docs/InstallRoot]]
    - NSCLDAQ
-     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/NSCLDAQ
+     See my instructions here: [[http://engesrv.physics.ncsu.edu/Docs/NSCLDAQ]]
    - EPICS client
-     See my instructions here: http://engesrv.physics.ncsu.edu/Docs/EPICSClient
+     See my instructions here: [[http://engesrv.physics.ncsu.edu/Docs/EPICSClient]]
    - MIDAS
-     See my instructions here:  http://engesrv.physics.ncsu.edu/Docs/MIDAS
+     See my instructions here:  [[http://engesrv.physics.ncsu.edu/Docs/MIDAS]]
