@@ -69,39 +69,39 @@
 ;;(require 'org-html5presentation)
 
 ;; Publish html
-(require 'org-publish)
-(setq org-publish-project-alist
-      '(
-	
-	;; ... add all the components here (see below)...
-	("org-notes"
-	 :base-directory "~/project/web/"
-	 :base-extension "org"
-	 :publishing-directory "~/www/"
-	 :recursive t
-	 :publishing-function org-publish-org-to-html
-	 :inline-images	org-export-html-inline-images
-	 :headline-levels 4             ; Just the default for this project.
-	 :auto-preamble t
-	 )
-
-	("org-static"
-	 :base-directory "~/project/web/"
-	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-	 :publishing-directory "~/www/"
-	 :recursive t
-	 :publishing-function org-publish-attachment
-	 )
-
-	("org-examples"
-	 :base-directory "~/project/web/examples/"
-	 :base-extension ".*"
-	 :publishing-directory "~/www/examples/"
-	 :recursive t
-	 :publishing-function org-publish-attachment
-	 )
-
-	("org" :components ("org-notes" "org-static" "org-examples"))
-	
-	)
-      )
+;;(require 'org-publish)
+;;(setq org-publish-project-alist
+;;      '(
+;;	
+;;	;; ... add all the components here (see below)...
+;;	("org-notes"
+;;	 :base-directory "~/project/web/"
+;;	 :base-extension "org"
+;;	 :publishing-directory "~/www/"
+;;	 :recursive t
+;;	 :publishing-function org-publish-org-to-html
+;;	 :inline-images	org-export-html-inline-images
+;;	 :headline-levels 4             ; Just the default for this project.
+;;	 :auto-preamble t
+;;	 )
+;;
+;;	("org-static"
+;;	 :base-directory "~/project/web/"
+;;	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+;;	 :publishing-directory "~/www/"
+;;	 :recursive t
+;;	 :publishing-function org-publish-attachment
+;;	 )
+;;
+;;	("org-examples"
+;;	 :base-directory "~/project/web/examples/"
+;;	 :base-extension ".*"
+;;	 :publishing-directory "~/www/examples/"
+;;	 :recursive t
+;;	 :publishing-function org-publish-attachment
+;;	 )
+;;
+;;	("org" :components ("org-notes" "org-static" "org-examples"))
+;;	
+;;	)
+;;      )
