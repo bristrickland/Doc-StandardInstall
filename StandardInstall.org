@@ -79,6 +79,8 @@
       + Under "Advanced" click the "Key Sequence to kill the X server" (now "Ctrl-Alt-Backspace" will kill the X server in case of crashes)
    9. Screensaver
       + Still in System Settings under Power Management. Lengthen Screen Energy Saving to 60 minutes.
+   10. Session settings
+       + While still in Sytem Settings under Startup and Shutdown. Click on Desktop Session and make sure "Start with an empty session" is selected.
 ** Clone the git repository
    1) Make a directory to work from:
       #+BEGIN_SRC sh
