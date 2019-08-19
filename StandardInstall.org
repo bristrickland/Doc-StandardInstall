@@ -126,7 +126,7 @@
     Install a bunch of packages
     - Basic
       #+BEGIN_SRC sh
-      sudo apt install openssh-server screen build-essential emacs
+      sudo apt install openssh-server screen build-essential emacs net-tools
       #+END_SRC
     - Other important tools
       #+BEGIN_SRC sh
@@ -151,6 +151,32 @@
             texlive-pictures texlive-pstricks texlive-publishers \
             xfig
     #+END_SRC
+** Networking
+   + Setup the hosts file. ~sudo nano /etc/hosts~
+     #+BEGIN_SRC sh
+     127.0.0.1       localhost
+     127.0.1.1       engedaq
+     10.0.0.5        engesbc
+
+     #The following lines are desirable for IPv6 capable hosts
+     ::1     ip6-localhost ip6-loopback
+     fe00::0 ip6-localnet
+     ff00::0 ip6-mcastprefix
+     ff02::1 ip6-allnodes
+     ff02::2 ip6-allrouters
+     #+END_SRC
+   + Setup the network connection with the single-board computer. ~sudo nano /etc/network/interfaces~
+     #+BEGIN_SRC 
+     # interfaces(5) file used by ifup(8) and ifdown(8)
+     auto lo
+     iface lo inet loopback
+
+     # Shared connection with SBC
+     auto eth0
+     iface eth0 inet static
+     address 10.0.0.1/24
+     #+END_SRC
+     In this case, eth0 may need to be replaced by the appropriate interface. Use ifconfig to see which one!
 ** Setup new users
    1. Make new users (here I'll make the DAQ user: "longland")
       - Still in system settings
@@ -170,3 +196,9 @@
      See my instructions here: [[http://engesrv.physics.ncsu.edu/Docs/EPICSClient]]
    - MIDAS
      See my instructions here:  [[http://engesrv.physics.ncsu.edu/Docs/MIDAS]]
+** Install EngeSpec
+   + Download the code
+     #+BEGIN_SRC sh
+     cd
+     
+     #+END_SRC
