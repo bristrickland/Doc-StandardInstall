@@ -209,3 +209,6 @@
      cmake .
      make
      #+END_SRC
+   + If you get a ~KeyError: 'back'~ error, it's a matplotlib bug.
+     + Edit ~matplotlib/backends/backend_qt5.py~ as root
+     + Change the relevent lines to match this patch: https://github.com/matplotlib/matplotlib/pull/14319/commits/a99a4c773fdcdf1f3de37ac2ca84851af5774cf9
