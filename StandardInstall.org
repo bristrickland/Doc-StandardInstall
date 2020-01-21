@@ -126,7 +126,7 @@
     Install a bunch of packages
     - Basic
       #+BEGIN_SRC sh
-      sudo apt install openssh-server screen build-essential emacs net-tools
+      sudo apt install openssh-server libssl-dev screen build-essential emacs net-tools
       #+END_SRC
     - Other important tools
       #+BEGIN_SRC sh
