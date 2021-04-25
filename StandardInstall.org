@@ -90,7 +90,7 @@
       #+END_SRC
    2) Clone the git repo
       #+BEGIN_SRC sh
-      git clone http://engesrv.physics.ncsu.edu/Docs/StandardInstall.git
+      git clone https://github.com/TUNL-Enge/Doc-StandardInstall.git
       cd StandardInstall
       #+END_SRC
 ** Start copying files
