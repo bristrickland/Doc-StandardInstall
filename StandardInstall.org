@@ -204,7 +204,7 @@
    + Download the code
      #+BEGIN_SRC sh
      cd
-     git clone http://engesrv.physics.ncsu.edu/DAQ/EngeSpec.git
+     git clone git@github.com:TUNL-Enge/DAQ-EngeSpec.git EngeSpec
      cd EngeSpec/lib
      cmake .
      make
