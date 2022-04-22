@@ -201,6 +201,11 @@
      #+BEGIN_SRC sh
      sudo apt install libboost-python-dev libboost-numpy-dev
      #+END_SRC
+   + You also need to download some packages through Python
+     #+BEGIN_SRC sh
+     sudo apt install pip
+     sudo pip install pyside2 matplotlib scipy lmfit pyQT5 pandas
+     #+END_SRC
    + Download the code
      #+BEGIN_SRC sh
      cd
@@ -228,3 +233,8 @@
        + Start run
        + Refresh
        + Try making a gate
+     + If you are having trouble with Offline MIDAS, try the following
+       #+BEGIN_SRC sh
+       ln -s lib/linEngeSort.so EngeSort.so
+       #+END_SRC
+       
